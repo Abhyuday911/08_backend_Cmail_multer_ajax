@@ -1,0 +1,181 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+*::-webkit-scrollbar{
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(155, 153, 153);
+}
+
+html,body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#main{
+    padding: 3vw 4vw 2vw 4vw;
+}
+
+#flexuser{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#photoform{
+    display: none;
+}
+
+#profilepic{
+    height: 100px;
+    width: 100px;
+    /* background-color: rgb(206, 206, 206); */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#profilepic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+h1{
+    font-size: 3.5vw;
+    margin-bottom: .5vw;
+}
+
+.username{
+    font-weight: 400;
+}
+
+.newmail{
+    background-color: rgb(6,147,227);
+    border: 0px solid transparent;
+    padding: 10px 15px;
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.logout{
+    width: 100px;
+    background-color: rgb(224,105,75);
+    border: 0px solid transparent;
+    padding: 9px 20px;
+    border-radius: 7px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: aliceblue; 
+    font-size: 15px;
+}
+
+.flexlogout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sentmails{
+    background-color: rgb(47, 177, 54);
+    border: 0px solid transparent;
+    padding: 7px 10px;
+    border-radius: 7px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    color: aliceblue; 
+}
+
+.mails{
+    height: 60vh;
+    width: 100%;
+    overflow: auto;
+}
+
+.mail{
+    height: 10vw;
+    width: 100%;
+    /* background-color: rgb(119, 119, 119); */
+    border: 1px solid rgb(119, 119, 119);
+    border-radius: 3px;
+    padding: 7px;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+#btm{
+    position: absolute;
+    bottom: 7%;
+    display: flex;
+    align-items: baseline;
+}
+
+.bin i{
+    margin-left: 7px;
+    display: flex;
+    align-items: baseline;
+}
+
+#btm a{
+    text-decoration: none;
+}
+
+.mail p{
+    margin-top: 10px;
+}
+
+#newmail{
+    width: 40vw;
+    height: 80vh;
+    background-color: rgb(221, 221, 221);position: fixed;
+    right: 2%;
+    z-index: 1;
+    top: 100%;
+    border-radius: 3px 3px 0px 0px;
+    padding: 25px;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+.closebtn{
+    background-color: rgb(224,105,75);
+    padding: 5px 10px;
+    color: aliceblue;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#email{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#econtent{
+    width: 100%;
+    height: 45vh;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#mailsubmitbtn{
+    background-color: rgb(6,147,227);
+    padding: 5px 10px;
+    color: aliceblue;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px; 
+}

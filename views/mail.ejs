@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/mail.css" />
+    <title>profile</title>
+  </head>
+  <body>
+    <div id="main">
+      <a href="/profile"><button class="backtoinbox">Back to inbox</button></a>
+      <div class="mails">
+        <div class="mail">
+          <h3><%= mail.senderid.username %></h3>
+          <p><%= mail.mailtext %></p>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

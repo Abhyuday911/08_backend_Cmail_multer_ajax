@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    <title>profile</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="newmail">
+        <button class="closebtn">Close</button>
+        <form action="/compose" method="post">
+          <label for="email">Sending to:</label><br />
+          <input type="text" id="email" name="receiveremail" /><br />
+          <textarea
+            name="mailtext"
+            id="econtent"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <br />
+          <button id="mailsubmitbtn" type="submit">Send</button>
+        </form>
+      </div>
+      <div id="flexuser">
+        <div id="user">
+          <h1>Hey <span class="username"> <%= user.name %> </span></h1>
+          <h2>Welcome back to Cmail</h2>
+        </div>
+        <form action="/fileupload" id="photoform" method="post" enctype="multipart/form-data">
+          <input type="file" name="image" id="fileinp" />
+          <input type="submit" />
+        </form>
+        <div id="profilepic">
+          <img src="/images/uploads/<%= user.image %>" alt="" />
+        </div>
+      </div>  
+      <div class="flexlogout">
+        <button class="newmail">+ Create New Mail</button>
+        <a href="/logout" class="alogout"><button class="logout">logout</button></a></div>
+      <hr />
+      <a href="/profile"><button class="sentmails">back to inbox</button></a>
+      <div class="mails">
+        <% user.sentmails.reverse().forEach(function(mail){ %>
+        <div class="mail" style="opacity: <%= mail.read ? 0.5 : 1 %>;">
+          <h3><%= mail.receiver %></h3>
+          <p><%= mail.mailtext %></p>
+          <div id="btm">
+            <a href="/read/mail/<%= mail._id%>" </a>>Read more</a>
+            <a class="bin" href=""><i class="ri-delete-bin-6-line"></i></a>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector(".closebtn")
+        .addEventListener("click", function () {
+          document.querySelector("#newmail").style.top = "100%";
+        });
+      document.querySelector(".newmail").addEventListener("click", function () {
+        document.querySelector("#newmail").style.top = "20vh";
+      });
+    </script>
+  </body>
+</html>

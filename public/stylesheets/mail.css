@@ -1,0 +1,59 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+*::-webkit-scrollbar{
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(155, 153, 153);
+}
+
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+
+#main{
+    padding: 3vw 4vw 2vw 4vw;
+}
+
+.backtoinbox{
+    background-color: rgb(47, 177, 54);
+    border: 0px solid transparent;
+    padding: 7px 10px;
+    border-radius: 7px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    color: aliceblue; 
+}
+
+.mails{
+    height: 80vh;
+    width: 100%;
+    overflow: auto;
+}
+
+.mail{
+    min-height: 10vw;
+    width: 100%;
+    /* background-color: rgb(119, 119, 119); */
+    border: 1px solid rgb(119, 119, 119);
+    border-radius: 3px;
+    padding: 7px;
+    margin-bottom: 7px;
+    position: relative;
+}
+
+.mail p{
+    margin-top: 10px;
+}
+
+
+
+
